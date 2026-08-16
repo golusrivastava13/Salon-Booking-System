@@ -1,0 +1,36 @@
+server:
+  port: 5006
+
+spring:
+  application:
+    name: payment-service
+
+  datasource:
+    url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/paymentdb?createDatabaseIfNotExist=true
+    username: root
+    password: Golu@4106
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+razorpay:
+  api:
+    key: "Your razorpay api key"
+    secret: "your razorpay api secret"
+
+stripe:
+  api:
+    key: "your stripe api key"
+
+eureka:
+  instance:
+    hostname: localhost
+
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: "http://localhost:8070/eureka/"
