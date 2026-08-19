@@ -11,6 +11,8 @@ import { Route, Routes } from 'react-router-dom'
 import HomePage from './Home/HomePage'
 import CreateServiceForm from './Services/CreateServiceForm'
 import Notifications from '../Customer/Notification/Notifications'
+import Payment from './Payment/Payment'
+import SalonRoutes from '../Routes/SalonRoutes'
 
 const SalonDashboard = () => {
   return (
@@ -21,19 +23,8 @@ const SalonDashboard = () => {
           <SalonDrawerList/>
         </div>
         <div className='p-10 w-full lg:w-[80%] overflow-y-auto'>
-          <Routes>
-            <Route path='/' element={<HomePage/>}/>
-            <Route path='/services' element={<ServiceTable/>}/>
-            <Route path='/add-services' element={<CreateServiceForm/>}/>
-            <Route path='/bookings' element={<BookingTable/>}/>
-            <Route path='/category' element={<Category/>}/>
-            <Route path='/transaction' element={<TransactionTable/>}/>
-            <Route path='/notifications' element={<Notifications/>}/>
-          </Routes>
-          {/* <BookingTable/> */}
-          {/* <ServiceTable/> */}
-          {/* <TransactionTable/> */}
-          {/* <Category/> */}
+          <SalonRoutes/>
+         
         </div>
       </section>
     </div>
