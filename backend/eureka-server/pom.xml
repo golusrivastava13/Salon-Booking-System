@@ -8,7 +8,7 @@
 		<version>4.1.0</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.glowup</groupId>
+	<groupId>com.salonbooking</groupId>
 	<artifactId>eureka-server</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name/>
@@ -59,6 +59,19 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>com.google.cloud.tools</groupId>
+				<artifactId>jib-maven-plugin</artifactId>
+				<version>3.4.4</version>
+				<configuration>
+					<to>
+						<image>golu003/salon-eurekaserver:v1</image>
+					</to>
+					<container>
+						<mainClass>com.salonbooking.EurekaServerApplication</mainClass>
+					</container>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>

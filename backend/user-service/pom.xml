@@ -8,8 +8,8 @@
 		<version>4.0.7</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.glowup</groupId>
-	<artifactId>payment-service</artifactId>
+	<groupId>com.salonbooking</groupId>
+	<artifactId>user-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name/>
 	<description/>
@@ -198,6 +198,16 @@
 						</configuration>
 					</execution>
 				</executions>
+			</plugin>
+			<plugin>
+				<groupId>com.google.cloud.tools</groupId>
+				<artifactId>jib-maven-plugin</artifactId>
+				<version>3.4.4</version>
+				<configuration>
+					<to>
+						<image>golu003/salon-user:v1</image>
+					</to>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
