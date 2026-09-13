@@ -1,8 +1,7 @@
 package com.salonbooking.service;
 
-import com.salonbooking.payload.dto.Credential;
-import com.salonbooking.payload.dto.SignupDTO;
-import com.salonbooking.payload.dto.UserRequest;
+import com.salonbooking.payload.dto.*;
+import com.salonbooking.payload.response.TokenResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.*;
 import org.springframework.stereotype.Service;
@@ -30,7 +29,9 @@ public class KeyCloakService {
 
     public void createUser(SignupDTO signupDTO) throws Exception{
 
-        String ACCESS_TOKEN="";
+        String ACCESS_TOKEN=getAdminAccessToken(username,
+                password,
+                GRANT_TYPE, null).getAccessToken();
 
         Credential credential=new Credential();
         credential.setTemporary(false);
@@ -62,5 +63,23 @@ public class KeyCloakService {
         }
 
     }
+
+    public TokenResponse getAdminAccessToken(String username,
+                                             String password,
+                                             String grantType,
+                                             String refreshToken){
+        return new TokenResponse();
+    }
+
+    public KeycloakRole getRoleByName(String clientId,
+                                      String token,
+                                      String role){
+        return null;
+    }
+
+    public KeycloakUserDTO fetchFirstUserByUsername(String username, String token){
+        return null;
+    }
+
 
 }
