@@ -29,7 +29,7 @@ public class AuthController {
             @RequestBody LoginDTO req
     ) throws Exception {
 
-        AuthResponse res = authService.login(req.getUsername(),req.getPassword());
+        AuthResponse res = authService.login(req.getEmail(),req.getPassword());
         return ResponseEntity.ok(res);
     }
 

@@ -2,7 +2,9 @@ package com.salonbooking.service.impl;
 
 import com.salonbooking.exception.UserException;
 import com.salonbooking.modal.User;
+import com.salonbooking.payload.dto.KeycloakUserDTO;
 import com.salonbooking.repository.UserRepository;
+import com.salonbooking.service.KeyCloakService;
 import com.salonbooking.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -15,6 +17,7 @@ import java.util.Optional;
 public class UserServiceImpl implements UserService {
 
     private final UserRepository userRepository;
+    private final KeyCloakService keyCloakService;
     @Override
     public User createUser(User user) {
         return userRepository.save(user);
@@ -58,5 +61,11 @@ public class UserServiceImpl implements UserService {
         existingUser.setUsername(user.getUsername());
 
         return userRepository.save(existingUser);
+    }
+
+    @Override
+    public User getUserFromJwt(String jwt) throws Exception {
+        KeycloakUserDTO keycloakUserDTO=keyCloakService.fetchUserProfileByJwt(jwt);
+        return userRepository.findByEmail(keycloakUserDTO.getEmail());
     }
 }

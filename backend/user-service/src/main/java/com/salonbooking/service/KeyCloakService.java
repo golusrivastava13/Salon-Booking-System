@@ -47,8 +47,8 @@ public class KeyCloakService {
         userRequest.setUsername(signupDTO.getUsername());
         userRequest.setEmail(signupDTO.getEmail());
         userRequest.setEnabled(true);
-        userRequest.setLastName(signupDTO.getLastName());
-        userRequest.setFirstName(signupDTO.getFirstName());
+        userRequest.setLastName(signupDTO.getFullName());
+        userRequest.getCredentials().add(credential);
 
         HttpHeaders headers=new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_JSON);
@@ -193,6 +193,32 @@ public class KeyCloakService {
             );
         }catch (Exception e){
             throw new Exception("Failed to assign role "+e.getMessage());
+        }
+
+
+
+    }
+    public KeycloakUserDTO fetchUserProfileByJwt(String token) throws Exception {
+
+        String url=KEYCLOAK_BASE_URL+"/realms/master/protocol/openid-connect/userinfo";
+        HttpHeaders headers=new HttpHeaders();
+        headers.set("Authorization", token);
+        headers.setContentType(MediaType.APPLICATION_JSON);
+
+
+
+        HttpEntity<String> requestEntity=new HttpEntity<>(headers);
+
+        try {
+            ResponseEntity<KeycloakUserDTO> response = restTemplate.exchange(
+                    url,
+                    HttpMethod.POST ,
+                    requestEntity,
+                    KeycloakUserDTO.class
+            );
+            return response.getBody();
+        }catch (Exception e){
+            throw new Exception("Failed to get user info "+e.getMessage());
         }
 
 

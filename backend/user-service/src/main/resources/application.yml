@@ -8,7 +8,7 @@ spring:
     name: user-service
 
   datasource:
-    url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/userdb
+    url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/userdb?createDatabaseIfNotExist=true
     username: root
     password: Golu@4106
     driver-class-name: com.mysql.cj.jdbc.Driver
