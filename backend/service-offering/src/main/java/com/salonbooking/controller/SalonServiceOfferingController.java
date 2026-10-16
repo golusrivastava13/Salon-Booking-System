@@ -28,7 +28,7 @@ public class SalonServiceOfferingController {
     ) throws Exception {
         SalonDTO salonDTO=salonFeignClient.getSalonByOwnerId(jwt).getBody();
 
-        CategoryDTO categoryDTO=categoryFeignClient.getCategoryById(serviceDTO.getCategory()).getBody();
+        CategoryDTO categoryDTO=categoryFeignClient.getCategoriesByIdAndSalon(serviceDTO.getCategory(),salonDTO.getId()).getBody();
 
 
         ServiceOffering serviceOfferings=serviceOfferingService

@@ -61,7 +61,8 @@ public class SalonController {
     }
 
     @GetMapping("/{salonId}")
-    public ResponseEntity<SalonDTO> getSalonById(@PathVariable Long salonId) throws Exception {
+    public ResponseEntity<SalonDTO> getSalonById(@PathVariable Long salonId)
+            throws Exception {
 
         Salon salon = salonService.getSalonById(salonId);
         SalonDTO salonDTO=SalonMapper.mapToDTO(salon);
