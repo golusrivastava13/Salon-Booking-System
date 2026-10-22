@@ -5,40 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d6a2896e-e85a-482a-9ad3-b400ccfc0300" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/booking-service/src/main/java/com/salonbooking/domain/PaymentMethod.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/booking-service/src/main/java/com/salonbooking/dto/PaymentLinkResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/booking-service/src/main/java/com/salonbooking/service/client/CategoryFeignClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/booking-service/src/main/java/com/salonbooking/service/client/PaymentFeignClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/booking-service/src/main/java/com/salonbooking/service/client/SalonFeignClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/booking-service/src/main/java/com/salonbooking/service/client/ServiceOfferingFeignClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/booking-service/src/main/java/com/salonbooking/service/client/UserFeignClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/category-service/src/main/java/com/salonbooking/dto/CategoryDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/category-service/src/main/java/com/salonbooking/service/client/SalonFeignClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/category-service/src/main/java/com/salonbooking/service/client/UserFeignClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/payment-service/src/main/java/com/salonbooking/service/client/CategoryFeignClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/payment-service/src/main/java/com/salonbooking/service/client/SalonFeignClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/payment-service/src/main/java/com/salonbooking/service/client/ServiceOfferingFeignClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/payment-service/src/main/java/com/salonbooking/service/client/UserFeignClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notifications/src/main/java/com/salonbooking/domain/BookingStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notifications/src/main/java/com/salonbooking/mapper/NotificationMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notifications/src/main/java/com/salonbooking/modal/Notification.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notifications/src/main/java/com/salonbooking/payload/dto/BookingDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notifications/src/main/java/com/salonbooking/payload/dto/NotificationDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notifications/src/main/java/com/salonbooking/payload/dto/SalonDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notifications/src/main/java/com/salonbooking/payload/dto/UserDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notifications/src/main/java/com/salonbooking/repository/NotificationRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notifications/src/main/java/com/salonbooking/service/NotificationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notifications/src/main/java/com/salonbooking/service/client/BookingFeignClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notifications/src/main/java/com/salonbooking/service/impl/NotificationServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/booking-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/booking-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/booking-service/src/main/java/com/salonbooking/BookingServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/booking-service/src/main/java/com/salonbooking/BookingServiceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/booking-service/src/main/java/com/salonbooking/controller/BookingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/booking-service/src/main/java/com/salonbooking/controller/BookingController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/booking-service/src/main/java/com/salonbooking/dto/BookingDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/booking-service/src/main/java/com/salonbooking/dto/BookingDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/booking-service/src/main/java/com/salonbooking/mapper/BookingMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/booking-service/src/main/java/com/salonbooking/mapper/BookingMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/category-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/category-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/category-service/src/main/java/com/salonbooking/CategoryServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/category-service/src/main/java/com/salonbooking/CategoryServiceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/category-service/src/main/java/com/salonbooking/controller/SalonCategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/category-service/src/main/java/com/salonbooking/controller/SalonCategoryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/category-service/src/main/java/com/salonbooking/repository/CategoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/category-service/src/main/java/com/salonbooking/repository/CategoryRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/category-service/src/main/java/com/salonbooking/service/CategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/category-service/src/main/java/com/salonbooking/service/CategoryService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/category-service/src/main/java/com/salonbooking/service/impl/CategoryServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/category-service/src/main/java/com/salonbooking/service/impl/CategoryServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/payment-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/payment-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/payment-service/src/main/java/com/salonbooking/PaymentServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/payment-service/src/main/java/com/salonbooking/PaymentServiceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/payment-service/src/main/java/com/salonbooking/controller/PaymentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/payment-service/src/main/java/com/salonbooking/controller/PaymentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/payment-service/src/main/java/com/salonbooking/service/impl/PaymentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/payment-service/src/main/java/com/salonbooking/service/impl/PaymentServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/salon-service/src/main/java/com/salonbooking/controller/SalonController.java" beforeDir="false" afterPath="$PROJECT_DIR$/salon-service/src/main/java/com/salonbooking/controller/SalonController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-offering/src/main/java/com/salonbooking/controller/SalonServiceOfferingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-offering/src/main/java/com/salonbooking/controller/SalonServiceOfferingController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-offering/src/main/java/com/salonbooking/service/client/CategoryFeignClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-offering/src/main/java/com/salonbooking/service/client/CategoryFeignClient.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,8 +31,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -145,6 +127,7 @@
     "Spring Boot.CategoryServiceApplication.executor": "Run",
     "Spring Boot.EurekaServerApplication.executor": "Run",
     "Spring Boot.GatewayServerApplication.executor": "Run",
+    "Spring Boot.NotificationsApplication.executor": "Run",
     "Spring Boot.PaymentServiceApplication.executor": "Run",
     "Spring Boot.SalonServiceApplication.executor": "Run",
     "Spring Boot.ServiceOfferingApplication.executor": "Run",
@@ -156,7 +139,7 @@
     "ignore.virus.scanning.warn.message": "true",
     "junie.onboarding.icon.badge.shown": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "E:/Saloon Booking/backend/payment-service/src/main/java/com/salonbooking/service",
+    "last_opened_file_path": "E:/Saloon Booking/backend/notifications/src/main/java/com/salonbooking/payload",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -174,11 +157,11 @@
       <recent name="com.glowup.dto" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Saloon Booking\backend\notifications\src\main\java\com\salonbooking\payload" />
       <recent name="E:\Saloon Booking\backend\payment-service\src\main\java\com\salonbooking\service" />
       <recent name="E:\Saloon Booking\backend\booking-service\src\main\java\com\salonbooking\service" />
       <recent name="E:\Saloon Booking\backend\category-service\src\main\java\com\salonbooking\service" />
       <recent name="E:\Saloon Booking\microservices\payment-service\src\main\java\com\glowup\payload" />
-      <recent name="E:\Saloon Booking\microservices\payment-service\src\main\java\com\glowup" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\Saloon Booking\microservices\payment-service\src\main\java\com\glowup" />
@@ -205,6 +188,7 @@
               <entry key="CategoryServiceApplication" value="STOPPED" />
               <entry key="EurekaServerApplication" value="STOPPED" />
               <entry key="GatewayServerApplication" value="STOPPED" />
+              <entry key="NotificationsApplication" value="STOPPED" />
               <entry key="PaymentServiceApplication" value="STOPPED" />
               <entry key="SalonServiceApplication" value="STOPPED" />
               <entry key="ServiceOfferingApplication" value="STOPPED" />
@@ -272,6 +256,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="NotificationsApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="notifications" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.salonbooking.NotificationsApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SalonServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="salon-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.salonbooking.SalonServiceApplication" />
@@ -315,6 +306,7 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Spring Boot.NotificationsApplication" />
       <item itemvalue="Spring Boot.BookingServiceApplication" />
       <item itemvalue="Spring Boot.CategoryServiceApplication" />
       <item itemvalue="Spring Boot.EurekaServerApplication" />
