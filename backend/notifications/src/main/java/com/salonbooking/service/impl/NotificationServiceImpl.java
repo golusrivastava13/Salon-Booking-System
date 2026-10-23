@@ -32,16 +32,21 @@ public class NotificationServiceImpl implements NotificationService {
 
     @Override
     public List<Notification> getAllNotificationByUserId(Long userId) {
-        return List.of();
+        return notificationRepository.findByUserId(userId);
     }
 
     @Override
     public List<Notification> getAllNotificationBySalonId(Long salonId) {
-        return List.of();
+        return notificationRepository.findBySalonId(salonId);
     }
 
     @Override
-    public Notification markNotificationAsRead(Long notificationId) {
-        return null;
+    public Notification markNotificationAsRead(Long notificationId) throws Exception {
+        return notificationRepository.findById(notificationId).map(
+                notification -> {
+                    notification.setRead(true);
+                    return notificationRepository.save(notification);
+                }
+        ).orElseThrow(()-> new Exception("Notification not found"));
     }
 }

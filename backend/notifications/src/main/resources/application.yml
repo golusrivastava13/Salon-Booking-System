@@ -4,7 +4,7 @@ server:
 
 spring:
   application:
-    name: notifications
+    name: notification-service
 
   datasource:
     url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/notificationdb?createDatabaseIfNotExist=true
